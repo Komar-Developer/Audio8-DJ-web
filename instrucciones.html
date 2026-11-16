@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title data-es="Instrucciones · Audio8 DJ para Mac Intel" data-en="Instructions · Audio8 DJ for Intel Macs">Instrucciones · Audio8 DJ para Mac Intel</title>
+  <meta name="theme-color" content="#050505" />
+  <script>(function(){var l;try{l=localStorage.getItem("a8dj-lang")}catch(e){}if(l!=="es"&&l!=="en")l=/^es\b/i.test(navigator.language||"")?"es":"en";document.documentElement.lang=l})();</script>
+  <link rel="icon" href="assets/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <a href="index.html" data-testid="site-home-link"><img src="assets/icon-512.png" alt="" /><span class="brand">Audio<b>8</b> DJ</span></a>
+      <span class="tag"><span data-l="es">Instrucciones</span><span data-l="en">Instructions</span></span>
+      <button id="lang-toggle" class="lang" type="button" data-testid="lang-toggle">EN</button>
+    </header>
+
+    <article data-testid="instructions-page">
+      <div data-l="es">
+        <span class="eyebrow"><span class="led"></span> Paso a paso</span>
+        <h1>Instrucciones</h1>
+        <p class="lead">Unos 10 minutos. Necesitas tu clave de licencia (<code>A8DJ-XXXXX-…</code>) y la contraseña de administrador de tu Mac.</p>
+        <p>¿Aún no tienes clave? <a href="comprar.html">Cómprala aquí</a> con Bizum.</p>
+
+        <h2>1. Antes de empezar</h2>
+        <ul>
+          <li>Mac con procesador Intel y macOS 13 o posterior. Lo ves en  &gt; Acerca de este Mac.</li>
+          <li>Si tenías instalado el driver antiguo de Native Instruments, desinstálalo primero y reinicia.</li>
+          <li>Conecta la Audio 8 DJ por USB directamente al Mac (mejor sin hub) y enciéndela.</li>
+        </ul>
+
+        <h2>2. Instalar</h2>
+        <ol>
+          <li>Descarga el disco <code>.dmg</code> desde la <a href="index.html">página principal</a> y ábrelo.</li>
+          <li>Haz doble clic en <code>OpenA8DJ-….pkg</code> y sigue el instalador. Te pedirá tu contraseña.</li>
+          <li>Al terminar, expulsa el disco. No hace falta reiniciar.</li>
+        </ol>
+
+        <h2>3. Activar la licencia</h2>
+        <ol>
+          <li>Abre <b>OpenA8DJ Control Center</b> desde Aplicaciones.</li>
+          <li>Se abre la pantalla <b>Licencia de este Mac</b>. Escribe tu clave en «Introducir otra clave de licencia» y pulsa <b>Activar</b>.</li>
+          <li>Introduce la contraseña del Mac cuando la pida: así se guarda la autorización del driver y se reinicia el audio.</li>
+          <li>Las tres filas deben ponerse en verde: licencia, driver de audio y Audio 8 conectada.</li>
+        </ol>
+        <p>Cada clave sirve para 2 Macs. Puedes volver a esta pantalla cuando quieras desde el icono de la barra de menús o desde el menú <b>OpenA8DJ Control Center &gt; Licencia de este Mac…</b></p>
+
+        <h2>4. Usarla en tu software de DJ</h2>
+        <ol>
+          <li>Abre <b>Configuración de Audio MIDI</b> (en Aplicaciones &gt; Utilidades) y comprueba que aparece la Audio 8.</li>
+          <li>En Traktor, Serato, rekordbox o Mixxx, elige la Audio 8 como dispositivo de audio en las preferencias.</li>
+          <li>Haz una prueba de sonido antes de cualquier actuación.</li>
+        </ol>
+
+        <h2>Después de actualizar macOS</h2>
+        <p>Abre Control Center y revisa <b>Licencia de este Mac</b>. Si el audio no vuelve, pulsa <b>Reiniciar Core Audio</b>.</p>
+
+        <h2>Desinstalar</h2>
+        <pre>sudo /usr/local/bin/opena8dj-uninstall
+sudo rm -f /Library/Audio/Plug-Ins/HAL/OpenA8DJ.license</pre>
+        <p>La segunda línea borra también la autorización de este Mac. Si quieres usar la plaza en otro Mac, pídenos que la liberemos desde <a href="soporte.html">Soporte</a>.</p>
+      </div>
+
+      <div data-l="en">
+        <span class="eyebrow"><span class="led"></span> Step by step</span>
+        <h1>Instructions</h1>
+        <p class="lead">About 10 minutes. You need your license key (<code>A8DJ-XXXXX-…</code>) and your Mac's administrator password.</p>
+        <p>No key yet? <a href="comprar.html">Buy one here</a> with Bizum.</p>
+
+        <h2>1. Before you start</h2>
+        <ul>
+          <li>A Mac with an Intel processor and macOS 13 or later. Check it in  &gt; About This Mac.</li>
+          <li>If the old Native Instruments driver is installed, uninstall it first and restart.</li>
+          <li>Connect the Audio 8 DJ by USB directly to the Mac (preferably without a hub) and switch it on.</li>
+        </ul>
+
+        <h2>2. Install</h2>
+        <ol>
+          <li>Download the <code>.dmg</code> disk from the <a href="index.html">home page</a> and open it.</li>
+          <li>Double-click <code>OpenA8DJ-….pkg</code> and follow the installer. It will ask for your password.</li>
+          <li>When it finishes, eject the disk. No restart needed.</li>
+        </ol>
+
+        <h2>3. Activate your license</h2>
+        <ol>
+          <li>Open <b>OpenA8DJ Control Center</b> from Applications.</li>
+          <li>The <b>License on this Mac</b> screen opens. Type your key under “Enter another license key” and click <b>Activate</b>.</li>
+          <li>Enter your Mac's password when asked: this saves the driver authorization and restarts audio.</li>
+          <li>All three rows should turn green: license, audio driver and Audio 8 connected.</li>
+        </ol>
+        <p>Each key works on 2 Macs. You can return to this screen any time from the menu bar icon or from <b>OpenA8DJ Control Center &gt; License on this Mac…</b></p>
+
+        <h2>4. Use it in your DJ software</h2>
+        <ol>
+          <li>Open <b>Audio MIDI Setup</b> (in Applications &gt; Utilities) and check that the Audio 8 is listed.</li>
+          <li>In Traktor, Serato, rekordbox or Mixxx, select the Audio 8 as the audio device in the preferences.</li>
+          <li>Do a sound check before any gig.</li>
+        </ol>
+
+        <h2>After a macOS update</h2>
+        <p>Open Control Center and check <b>License on this Mac</b>. If audio doesn't come back, click <b>Restart Core Audio</b>.</p>
+
+        <h2>Uninstall</h2>
+        <pre>sudo /usr/local/bin/opena8dj-uninstall
+sudo rm -f /Library/Audio/Plug-Ins/HAL/OpenA8DJ.license</pre>
+        <p>The second line also removes this Mac's authorization. To use the slot on another Mac, ask us to free it via <a href="soporte.html">Support</a>.</p>
+      </div>
+
+      <div class="back-row"><a class="btn" href="index.html" data-testid="back-btn">← <span data-l="es">Volver</span><span data-l="en">Back</span></a></div>
+    </article>
+
+    <footer>
+      <nav><a href="index.html"><span data-l="es">Descarga</span><span data-l="en">Download</span></a><a href="comprar.html"><span data-l="es">Comprar</span><span data-l="en">Buy</span></a><a href="instrucciones.html"><span data-l="es">Instrucciones</span><span data-l="en">Instructions</span></a><a href="soporte.html"><span data-l="es">Soporte</span><span data-l="en">Support</span></a><a href="privacidad.html"><span data-l="es">Privacidad</span><span data-l="en">Privacy</span></a><a href="terminos.html"><span data-l="es">Términos</span><span data-l="en">Terms</span></a></nav>
+      <p data-l="es">Basado en OpenA8DJ, un proyecto independiente de compatibilidad. No afiliado a Native Instruments ni Apple.</p>
+      <p data-l="en">Based on OpenA8DJ, an independent compatibility project. Not affiliated with Native Instruments or Apple.</p>
+      <p class="copy" data-testid="site-copyright">© <span data-year></span> Adelio Falcó Martí · Audio8 DJ compiler kext</p>
+    </footer>
+  </div>
+  <script src="config.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

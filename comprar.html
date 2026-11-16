@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title data-es="Comprar licencia · Audio8 DJ para Mac Intel" data-en="Buy a license · Audio8 DJ for Intel Macs">Comprar licencia · Audio8 DJ para Mac Intel</title>
+  <meta name="theme-color" content="#050505" />
+  <script>(function(){var l;try{l=localStorage.getItem("a8dj-lang")}catch(e){}if(l!=="es"&&l!=="en")l=/^es\b/i.test(navigator.language||"")?"es":"en";document.documentElement.lang=l})();</script>
+  <link rel="icon" href="assets/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <a href="index.html" data-testid="site-home-link"><img src="assets/icon-512.png" alt="" /><span class="brand">Audio<b>8</b> DJ</span></a>
+      <span class="tag"><span data-l="es">Comprar</span><span data-l="en">Buy</span></span>
+      <button id="lang-toggle" class="lang" type="button" data-testid="lang-toggle">EN</button>
+    </header>
+
+    <article data-testid="buy-page">
+      <span class="eyebrow"><span class="led"></span> <span data-l="es">Pago con Bizum</span><span data-l="en">Pay with Bizum</span></span>
+      <h1><span data-l="es">Comprar licencia</span><span data-l="en">Buy a license</span></h1>
+      <p class="lead" data-l="es">Una clave para <span data-devices>2</span> Macs por <b data-price>20 €</b>. Pagas por Bizum y te enviamos la clave por correo en cuanto comprobemos el pago.</p>
+      <p class="lead" data-l="en">One key for <span data-devices>2</span> Macs for <b data-price>€20</b>. Pay by Bizum and we'll email you the key as soon as we confirm the payment.</p>
+
+      <form id="buy-form" class="buy" novalidate data-testid="buy-form">
+        <label><span data-l="es">Nombre</span><span data-l="en">Name</span>
+          <input name="name" required minlength="2" maxlength="80" autocomplete="name" data-testid="buy-name" /></label>
+        <label><span data-l="es">Correo electrónico</span><span data-l="en">Email</span>
+          <input name="email" type="email" required maxlength="120" autocomplete="email" data-testid="buy-email" /></label>
+        <div class="coupon">
+          <label><span data-l="es">Cupón de descuento (opcional)</span><span data-l="en">Discount coupon (optional)</span>
+            <input name="coupon" maxlength="20" autocomplete="off" data-testid="buy-coupon" /></label>
+          <button id="coupon-apply" class="btn" type="button" data-testid="buy-coupon-apply"><span data-l="es">Aplicar</span><span data-l="en">Apply</span></button>
+        </div>
+        <p id="coupon-msg" class="buy-msg" data-testid="buy-coupon-msg"></p>
+        <label class="check"><input name="accept" type="checkbox" data-testid="buy-accept" />
+          <span data-l="es">Acepto los <a href="terminos.html">términos</a> y la <a href="privacidad.html">privacidad</a>.</span>
+          <span data-l="en">I accept the <a href="terminos.html">terms</a> and <a href="privacidad.html">privacy policy</a>.</span></label>
+        <button class="btn btn-primary" type="submit" data-testid="buy-submit"><span data-l="es">Crear pedido</span><span data-l="en">Place order</span></button>
+        <p id="buy-msg" class="buy-msg" data-testid="buy-msg"></p>
+      </form>
+
+      <div id="buy-result" class="pay" hidden data-testid="buy-result">
+        <p class="eyebrow"><span data-l="es">Tu pedido</span><span data-l="en">Your order</span></p>
+        <ol>
+          <li><span data-l="es">Abre la app de tu banco y envía un <b>Bizum</b> de</span><span data-l="en">Open your bank app and send a <b>Bizum</b> payment of</span> <b id="buy-amount" data-testid="buy-amount"></b></li>
+          <li><span data-l="es">al móvil</span><span data-l="en">to the mobile number</span> <b id="buy-phone" data-testid="buy-phone"></b></li>
+          <li><span data-l="es">con este concepto exacto:</span><span data-l="en">with this exact reference:</span> <code id="buy-ref" class="ref" data-testid="buy-ref"></code></li>
+        </ol>
+        <p id="buy-status" class="buy-status" data-testid="buy-status"></p>
+        <p id="buy-checked" class="buy-msg" data-testid="buy-checked"></p>
+        <p><a id="buy-receipt" class="btn" href="#" hidden data-testid="buy-receipt"><span data-l="es">Descargar recibo (PDF)</span><span data-l="en">Download receipt (PDF)</span></a></p>
+        <div class="download">
+          <button id="buy-check" class="btn" type="button" data-testid="buy-check"><span data-l="es">Comprobar estado</span><span data-l="en">Check status</span></button>
+          <button id="buy-new" class="btn" type="button" data-testid="buy-new"><span data-l="es">Hacer otro pedido</span><span data-l="en">Place another order</span></button>
+        </div>
+        <p class="note" data-l="es">Revisamos los pagos a mano, normalmente en menos de 24 horas. Si no recibes el correo, mira en la carpeta de spam o escríbenos desde <a href="soporte.html">Soporte</a> indicando tu concepto.</p>
+        <p class="note" data-l="en">We check payments by hand, usually within 24 hours. If the email doesn't arrive, check your spam folder or contact us via <a href="soporte.html">Support</a> with your reference.</p>
+      </div>
+
+      <div class="back-row"><a class="btn" href="index.html" data-testid="back-btn">← <span data-l="es">Volver</span><span data-l="en">Back</span></a></div>
+    </article>
+
+    <footer>
+      <nav><a href="index.html"><span data-l="es">Descarga</span><span data-l="en">Download</span></a><a href="comprar.html"><span data-l="es">Comprar</span><span data-l="en">Buy</span></a><a href="instrucciones.html"><span data-l="es">Instrucciones</span><span data-l="en">Instructions</span></a><a href="soporte.html"><span data-l="es">Soporte</span><span data-l="en">Support</span></a><a href="privacidad.html"><span data-l="es">Privacidad</span><span data-l="en">Privacy</span></a><a href="terminos.html"><span data-l="es">Términos</span><span data-l="en">Terms</span></a></nav>
+      <p data-l="es">Basado en OpenA8DJ, un proyecto independiente de compatibilidad. No afiliado a Native Instruments ni Apple.</p>
+      <p data-l="en">Based on OpenA8DJ, an independent compatibility project. Not affiliated with Native Instruments or Apple.</p>
+      <p class="copy" data-testid="site-copyright">© <span data-year></span> Adelio Falcó Martí · Audio8 DJ compiler kext</p>
+    </footer>
+  </div>
+  <script src="config.js"></script>
+  <script src="assets/app.js"></script>
+  <script src="assets/buy.js"></script>
+</body>
+</html>
