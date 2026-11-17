@@ -4,9 +4,10 @@
   var gh = location.hostname.match(/^([^.]+)\.github\.io$/);
   if ((!c.repo || c.repo.indexOf("TU_USUARIO") === 0) && gh) c.repo = gh[1] + "/" + (location.pathname.split("/")[1] || gh[1] + ".github.io");
   var releases = "https://github.com/" + c.repo + "/releases";
-  if (c.shop === false) document.querySelectorAll('a[href="comprar.html"]').forEach(function (a) {
-    var p = a.closest("p"); (p && !p.closest("nav") ? p : a).hidden = true;
-  });
+  if (c.bizum) {
+    document.querySelectorAll("[data-bizum-es]").forEach(function (e) { e.textContent = "Al móvil " + c.bizum + "."; });
+    document.querySelectorAll("[data-bizum-en]").forEach(function (e) { e.textContent = "To the mobile number " + c.bizum + "."; });
+  }
   var T = {
     es: { other: "EN", label: "Switch to English", loading: "Buscando la última versión…", version: "Versión", missing: "Aún no hay ninguna versión publicada. Abre la página de versiones de GitHub.", locale: "es-ES" },
     en: { other: "ES", label: "Cambiar a español", loading: "Looking for the latest version…", version: "Version", missing: "No version has been published yet. Open the GitHub releases page.", locale: "en-GB" }
