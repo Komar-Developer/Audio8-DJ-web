@@ -133,3 +133,32 @@ footer .copy { margin-top: 10px; color: #c9c9ce; }
 .features li b { flex: 0 0 64px; font: 700 .8rem/1 var(--mono); letter-spacing: .08em; color: var(--red-hot); }
 .features .fine { font-size: .85rem; color: var(--muted); margin-top: 14px; }
 @media (max-width: 760px) { .features ul { grid-template-columns: 1fr; } }
+
+.soon { margin-top: 34px; display: flex; gap: 16px; align-items: flex-start; padding: 18px 20px; border: 1px solid var(--line); border-left: 2px solid var(--amber); border-radius: 12px; background: var(--panel); }
+.soon p { margin: 0; color: var(--muted); }
+.soon p b { color: var(--text); }
+.soon-tag { flex: none; font: 11px/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--amber); border: 1px solid var(--amber); padding: 6px 9px; border-radius: 4px; }
+@media (max-width: 460px) { .soon { flex-direction: column; } }
+.soon { align-items: center; }
+.soon p { flex: 1; }
+.soon-btn { flex: none; padding: 12px 18px; font-size: 13px; border-color: var(--amber); }
+.soon-btn:hover { background: var(--amber); color: #0a0a0a; }
+@media (max-width: 760px) { .soon { flex-direction: column; align-items: flex-start; } }
+html:not(.as-ok) [data-as="ok"], html.as-ok [data-as="soon"] { display: none !important; }
+.soon.ok { border-left-color: var(--green); }
+.soon.ok .soon-tag { color: var(--green); border-color: var(--green); }
+.mac-detect { margin: 14px 0 0; max-width: 620px; font-size: .92rem; color: var(--muted); border-left: 2px solid var(--line); padding-left: 12px; }
+.mac-detect:empty { display: none; }
+.mac-detect b { color: var(--text); }
+.mac-detect[data-kind="intel"], .mac-detect[data-kind="arm-ok"] { border-left-color: var(--green); }
+.mac-detect[data-kind="arm-soon"] { border-left-color: var(--amber); }
+.soon-actions { display: flex; flex-wrap: wrap; gap: 10px; flex: none; max-width: 360px; justify-content: flex-end; }
+.soon-btn .count { margin-left: 6px; padding: 2px 7px; border-radius: 999px; background: var(--amber); color: #0a0a0a; font: 700 11px/1.3 var(--mono); }
+.soon-btn .count:empty { display: none; }
+.soon.ok .soon-btn { border-color: var(--green); }
+.soon.ok .soon-btn:hover { background: var(--green); }
+.soon.ok .soon-btn .count { background: var(--green); }
+.soon-btn.ghost { border-color: var(--line) !important; }
+.soon-btn.ghost:hover { background: var(--text) !important; color: #0a0a0a; }
+@media (max-width: 760px) { .soon-actions { max-width: none; justify-content: flex-start; } }
+pre.cmd { margin: 14px 0 18px; padding: 14px 16px; border: 1px solid var(--line); border-radius: 10px; background: #0d0d10; color: var(--text); font: 13px/1.5 var(--mono); white-space: pre-wrap; word-break: break-all; user-select: all; }

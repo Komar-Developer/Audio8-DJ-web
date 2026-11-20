@@ -27,7 +27,7 @@
 
         <h2>1. Antes de empezar</h2>
         <ul>
-          <li>Mac con procesador Intel y macOS 13 o posterior. Lo ves en  &gt; Acerca de este Mac.</li>
+          <li><span data-as="ok">Mac Intel o Apple Silicon</span><span data-as="soon">Mac con procesador Intel</span> y macOS 13 Ventura a macOS 26 Tahoe. Lo ves en  &gt; Acerca de este Mac. <span data-as="soon">La versión para Apple Silicon llegará próximamente.</span></li>
           <li>Si tenías instalado el driver antiguo de Native Instruments, desinstálalo primero y reinicia.</li>
           <li>Conecta la Audio 8 DJ por USB directamente al Mac (mejor sin hub) y enciéndela.</li>
         </ul>
@@ -35,7 +35,8 @@
         <h2>2. Instalar</h2>
         <ol>
           <li>Descarga el disco <code>.dmg</code> desde la <a href="index.html">página principal</a> y ábrelo.</li>
-          <li>Haz doble clic en <code>OpenA8DJ-….pkg</code> y sigue el instalador. Te pedirá tu contraseña.</li>
+          <li data-as="soon">Haz doble clic en <code>Audio 8 DJ for Intel</code> y sigue el instalador. Te pedirá tu contraseña.</li>
+          <li data-as="ok">Dentro hay dos instaladores. Mira  &gt; Acerca de este Mac: si pone <b>Procesador Intel</b>, haz doble clic en <code>Audio 8 DJ for Intel</code>; si pone <b>Chip Apple M…</b>, en <code>Audio 8 DJ for Apple Silicon</code>. Sigue el instalador; te pedirá tu contraseña. Si eliges el que no es, el instalador te avisa.</li>
           <li>Al terminar, expulsa el disco. No hace falta reiniciar.</li>
         </ol>
 
@@ -57,12 +58,12 @@
         </ol>
 
         <h2>Después de actualizar macOS</h2>
-        <p>Abre Control Center y revisa la ventana <b>Activación</b>. Si el audio no vuelve, pulsa <b>Reiniciar Core Audio</b>.</p>
+        <p>Abre Control Center y revisa la ventana <b>Activation</b>. Si el audio no vuelve, pulsa <b>Reiniciar Core Audio</b>.</p>
 
         <h2>Desinstalar</h2>
-        <pre>sudo /usr/local/bin/opena8dj-uninstall
-sudo rm -f /Library/Audio/Plug-Ins/HAL/OpenA8DJ.license</pre>
-        <p>La segunda línea borra también la activación del driver. Si vuelves a instalarlo en este mismo Mac, abre Control Center y pulsa <b>Activar</b> con tu Key.</p>
+        <p>Abre el DMG y haz doble clic en <b>Uninstall Audio 8 DJ</b>. Pide tu contraseña y quita el driver, Control Center y sus herramientas. Tu activación se guarda: si vuelves a instalarlo en este mismo Mac, se recupera sola.</p>
+        <p>También desde Terminal:</p>
+        <pre>sudo /usr/local/bin/opena8dj-uninstall</pre>
       </div>
 
       <div data-l="en">
@@ -73,7 +74,7 @@ sudo rm -f /Library/Audio/Plug-Ins/HAL/OpenA8DJ.license</pre>
 
         <h2>1. Before you start</h2>
         <ul>
-          <li>A Mac with an Intel processor and macOS 13 or later. Check it in  &gt; About This Mac.</li>
+          <li><span data-as="ok">An Intel or Apple Silicon Mac</span><span data-as="soon">A Mac with an Intel processor</span> and macOS 13 Ventura to macOS 26 Tahoe. Check it in  &gt; About This Mac. <span data-as="soon">The Apple Silicon version is coming soon.</span></li>
           <li>If the old Native Instruments driver is installed, uninstall it first and restart.</li>
           <li>Connect the Audio 8 DJ by USB directly to the Mac (preferably without a hub) and switch it on.</li>
         </ul>
@@ -81,7 +82,8 @@ sudo rm -f /Library/Audio/Plug-Ins/HAL/OpenA8DJ.license</pre>
         <h2>2. Install</h2>
         <ol>
           <li>Download the <code>.dmg</code> disk from the <a href="index.html">home page</a> and open it.</li>
-          <li>Double-click <code>OpenA8DJ-….pkg</code> and follow the installer. It will ask for your password.</li>
+          <li data-as="soon">Double-click <code>Audio 8 DJ for Intel</code> and follow the installer. It will ask for your password.</li>
+          <li data-as="ok">There are two installers inside. Check  &gt; About This Mac: if it says <b>Intel processor</b>, double-click <code>Audio 8 DJ for Intel</code>; if it says <b>Apple M… chip</b>, <code>Audio 8 DJ for Apple Silicon</code>. Follow the installer; it will ask for your password. If you pick the wrong one, the installer tells you.</li>
           <li>When it finishes, eject the disk. No restart needed.</li>
         </ol>
 
@@ -106,9 +108,9 @@ sudo rm -f /Library/Audio/Plug-Ins/HAL/OpenA8DJ.license</pre>
         <p>Open Control Center and check the <b>Activation</b> window. If audio doesn't come back, click <b>Restart Core Audio</b>.</p>
 
         <h2>Uninstall</h2>
-        <pre>sudo /usr/local/bin/opena8dj-uninstall
-sudo rm -f /Library/Audio/Plug-Ins/HAL/OpenA8DJ.license</pre>
-        <p>The second line also removes the driver activation. If you reinstall on this same Mac, open Control Center and click <b>Activate</b> with your Key.</p>
+        <p>Open the DMG and double-click <b>Uninstall Audio 8 DJ</b>. It asks for your password and removes the driver, Control Center and its tools. Your activation is kept: if you reinstall on this same Mac, it comes back on its own.</p>
+        <p>Or from Terminal:</p>
+        <pre>sudo /usr/local/bin/opena8dj-uninstall</pre>
       </div>
 
       <div class="back-row"><a class="btn" href="index.html" data-testid="back-btn">← <span data-l="es">Volver</span><span data-l="en">Back</span></a></div>

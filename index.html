@@ -16,17 +16,21 @@
   <div class="wrap">
     <header class="top">
       <a href="index.html" data-testid="site-home-link"><img src="assets/icon-512.png" alt="" /><span class="brand">Audio<b>8</b> DJ</span></a>
-      <span class="tag">Mac Intel</span>
+      <span class="tag"><span data-as="soon">Mac Intel · macOS 13–26</span><span data-as="ok">Intel + Apple Silicon · macOS 13–26</span></span>
       <button id="lang-toggle" class="lang" type="button" data-testid="lang-toggle">EN</button>
     </header>
 
     <section class="hero">
       <div>
         <span class="eyebrow"><span class="led"></span> <span data-l="es">Driver para macOS</span><span data-l="en">macOS driver</span></span>
-        <h1 data-l="es">Tu Audio<span class="r">8</span> DJ vuelve a sonar en tu Mac Intel</h1>
-        <h1 data-l="en">Your Audio<span class="r">8</span> DJ plays again on your Intel Mac</h1>
-        <p class="lead" data-l="es">Instalador listo para usar del driver de la Audio 8 DJ para Macs con procesador Intel, con Control Center para activarlo y comprobar el estado del audio. Descarga gratuita.</p>
-        <p class="lead" data-l="en">A ready-to-use installer for the Audio 8 DJ driver on Macs with an Intel processor, with Control Center to activate it and check your audio status. Free download.</p>
+        <h1 data-l="es" data-as="soon">Tu Audio<span class="r">8</span> DJ vuelve a sonar en tu Mac Intel</h1>
+        <h1 data-l="es" data-as="ok">Tu Audio<span class="r">8</span> DJ vuelve a sonar en tu Mac</h1>
+        <h1 data-l="en" data-as="soon">Your Audio<span class="r">8</span> DJ plays again on your Intel Mac</h1>
+        <h1 data-l="en" data-as="ok">Your Audio<span class="r">8</span> DJ plays again on your Mac</h1>
+        <p class="lead" data-l="es" data-as="ok">Instaladores listos para usar del driver de la Audio 8 DJ para Macs Intel y Apple Silicon, con Control Center para activarlo y comprobar el estado del audio. Descarga gratuita.</p>
+        <p class="lead" data-l="es" data-as="soon">Instalador listo para usar del driver de la Audio 8 DJ para Macs con procesador Intel, con Control Center para activarlo y comprobar el estado del audio. Descarga gratuita.</p>
+        <p class="lead" data-l="en" data-as="ok">Ready-to-use installers for the Audio 8 DJ driver on Intel and Apple Silicon Macs, with Control Center to activate it and check your audio status. Free download.</p>
+        <p class="lead" data-l="en" data-as="soon">A ready-to-use installer for the Audio 8 DJ driver on Macs with an Intel processor, with Control Center to activate it and check your audio status. Free download.</p>
         <div class="download">
           <a id="download-btn" class="btn btn-primary" href="#" data-testid="download-btn">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16"/></svg>
@@ -35,14 +39,36 @@
           <a class="btn" href="activar.html" data-testid="activate-btn"><span data-l="es">Cómo se activa</span><span data-l="en">How to activate</span></a>
           <span id="download-meta" data-testid="download-meta"></span>
         </div>
+        <p id="mac-detect" class="mac-detect" data-testid="mac-detect"></p>
       </div>
       <img src="assets/icon-512.png" alt="Audio8 DJ" />
     </section>
 
     <section class="req" data-testid="requirements">
-      <div><b>Mac</b><span data-l="es">Procesador Intel</span><span data-l="en">Intel processor</span></div>
-      <div><b data-l="es">Sistema</b><b data-l="en">System</b><span data-l="es">macOS 13 o posterior</span><span data-l="en">macOS 13 or later</span></div>
+      <div><b>Mac</b><span data-as="soon"><span data-l="es">Procesador Intel · Apple Silicon, próximamente</span><span data-l="en">Intel processor · Apple Silicon coming soon</span></span><span data-as="ok"><span data-l="es">Intel y Apple Silicon (M1–M4)</span><span data-l="en">Intel and Apple Silicon (M1–M4)</span></span></div>
+      <div><b data-l="es">Sistema</b><b data-l="en">System</b><span data-l="es">macOS 13 Ventura a macOS 26 Tahoe</span><span data-l="en">macOS 13 Ventura to macOS 26 Tahoe</span></div>
       <div><b data-l="es">Activación</b><b data-l="en">Activation</b><span data-l="es">Una Key por Mac · aportación de 10 €</span><span data-l="en">One Key per Mac · €10 contribution</span></div>
+    </section>
+
+    <section class="soon" data-as="soon" data-testid="apple-silicon-soon">
+      <span class="soon-tag" data-l="es">Próximamente</span><span class="soon-tag" data-l="en">Coming soon</span>
+      <p data-l="es"><b>Apple Silicon (M1, M2, M3 y M4).</b> Estamos preparando la versión para Macs con chip de Apple. Pide la tuya: cuantas más solicitudes, antes llegará. Cada Mac lleva su propia Key de activación.</p>
+      <p data-l="en"><b>Apple Silicon (M1, M2, M3 and M4).</b> We're preparing the version for Macs with Apple chips. Ask for it: the more requests, the sooner it comes. Each Mac needs its own activation Key.</p>
+      <div class="soon-actions">
+        <a class="btn soon-btn" data-gh-issue="request" href="#" target="_blank" rel="noopener" data-testid="request-btn"><span data-l="es">Lo quiero en mi Mac M</span><span data-l="en">I want it on my M Mac</span> <b class="count" data-gh-count="request" data-testid="request-count"></b></a>
+        <a class="btn soon-btn" data-l="es" data-notify="es" href="#" data-testid="notify-btn-es">Avísame</a>
+        <a class="btn soon-btn" data-l="en" data-notify="en" href="#" data-testid="notify-btn-en">Notify me</a>
+        <a class="btn soon-btn ghost" data-gh-issues href="#" target="_blank" rel="noopener" data-testid="issues-btn-soon"><span data-l="es">Issues en GitHub</span><span data-l="en">GitHub issues</span></a>
+      </div>
+    </section>
+    <section class="soon ok" data-as="ok" data-testid="apple-silicon-ok">
+      <span class="soon-tag" data-l="es">Compatible</span><span class="soon-tag" data-l="en">Compatible</span>
+      <p data-l="es"><b>Compatible con Apple Silicon (M1, M2, M3 y M4).</b> El DMG trae un instalador para Intel y otro para Macs con chip de Apple. Si lo pruebas en un Mac M, cuéntanos cómo te va. Cada Mac lleva su propia Key de activación.</p>
+      <p data-l="en"><b>Compatible with Apple Silicon (M1, M2, M3 and M4).</b> The DMG includes one installer for Intel and one for Macs with Apple chips. If you try it on an M Mac, tell us how it goes. Each Mac needs its own activation Key.</p>
+      <div class="soon-actions">
+        <a class="btn soon-btn" data-gh-issue="tester" href="#" target="_blank" rel="noopener" data-testid="tester-btn"><span data-l="es">Lo he probado en mi Mac M</span><span data-l="en">I tested it on my M Mac</span> <b class="count" data-gh-count="tester" data-testid="tester-count"></b></a>
+        <a class="btn soon-btn ghost" data-gh-issues href="#" target="_blank" rel="noopener" data-testid="issues-btn-ok"><span data-l="es">Issues en GitHub</span><span data-l="en">GitHub issues</span></a>
+      </div>
     </section>
 
     <section class="features" data-testid="features">
