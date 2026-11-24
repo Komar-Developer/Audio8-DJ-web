@@ -30,7 +30,7 @@
         <h2>Test automático y GitHub</h2>
         <p>Abre Terminal, pega esto y sigue las preguntas. Prueba el sonido a 44,1 · 48 · 88,2 · 96 kHz, guarda <code>a8dj-tester.txt</code> en el Escritorio y abre un informe ya rellenado en GitHub:</p>
         <pre class="cmd" data-testid="tester-cmd-es">curl -fsSL https://komar-developer.github.io/Audio8-DJ-web/tester.sh | bash</pre>
-        <p><a data-gh-issues href="#" target="_blank" rel="noopener" data-testid="issues-link-es">Issues en GitHub</a>: solicitudes de Apple Silicon, informes de tester y fallos.</p>
+        <p><a data-gh-issues href="#" target="_blank" rel="noopener" data-testid="issues-link-es">Issues en GitHub</a>: solicitudes de Apple Silicon, informes de tester y fallos. ¿Tienes un Mac M? Mira la <a href="testers.html" data-testid="testers-link-es">página de testers</a>.</p>
 
         <h2>Problemas frecuentes</h2>
         <h3>No suena</h3>
@@ -41,6 +41,14 @@
         <p>Cada Mac necesita su propia activación. Pulsa <b>Enviar</b> en este Mac para pedir un nuevo registro; la Key anterior no sirve aquí.</p>
         <h3>La Audio 8 no aparece</h3>
         <p>Prueba otro cable o puerto USB, sin hub, y comprueba que la alimentación está encendida. Después pulsa <b>Volver a comprobar</b>.</p>
+        <h3>Traktor no recibe audio por las entradas (timecode)</h3>
+        <video class="guide" controls playsinline muted preload="none" poster="assets/guia-dvs-es.jpg" aria-label="Guía en vídeo: permiso de micrófono, Modo de micrófono Estándar y calibrar Traktor (28 s)." data-testid="dvs-guide-video-es"><source src="assets/guia-dvs-es.mp4" type="video/mp4" /></video>
+        <p>Si QuickTime o tu DAW sí reciben señal de la Audio 8 pero Traktor muestra <b>«Waiting…»</b> o una línea diagonal, revisa dos cosas de macOS. El Control Center también lo detecta solo y te avisa en <b>Estado del audio</b>, con un botón para arreglar el permiso:</p>
+        <p><b>1. Permiso de micrófono.</b> macOS solo pasa audio de entrada a las apps con permiso de <b>Micrófono</b>, también desde tarjetas externas. Si Traktor no aparece en Ajustes del Sistema &gt; Privacidad y seguridad &gt; Micrófono, cierra Traktor y pega esto en Terminal; al abrir Traktor y poner un deck en Live Input, macOS lo volverá a preguntar:</p>
+        <pre class="cmd" data-testid="mic-reset-cmd-es">tccutil reset Microphone com.native-instruments.Traktor</pre>
+        <p>Si aun así no lo pregunta, da a Terminal <b>Acceso total al disco</b> (en Privacidad y seguridad) y ejecuta este script, que concede el permiso directamente y guarda antes una copia de seguridad:</p>
+        <pre class="cmd" data-testid="mic-fix-cmd-es">curl -fsSL https://komar-developer.github.io/Audio8-DJ-web/traktor-micro-fix.command -o ~/Desktop/traktor-micro-fix.command; chmod +x ~/Desktop/traktor-micro-fix.command; open ~/Desktop/traktor-micro-fix.command</pre>
+        <p><b>2. Modo de micrófono en «Estándar».</b> Con Traktor abierto, pulsa el icono naranja del micrófono en la barra de menús (Centro de control) &gt; <b>Modo de micrófono</b> y elige <b>Estándar</b>. Con <b>Aislamiento de voz</b> o <b>Amplio espectro</b>, macOS filtra la señal de timecode como si fuera ruido y Traktor no la reconoce.</p>
         <h3>macOS no deja abrir el instalador</h3>
         <p>Descárgalo solo desde esta web. Si aun así aparece un aviso, escríbenos indicando el texto exacto del mensaje.</p>
       </div>
@@ -56,7 +64,7 @@
         <h2>Automatic test and GitHub</h2>
         <p>Open Terminal, paste this and follow the questions. It tests the sound at 44.1 · 48 · 88.2 · 96 kHz, saves <code>a8dj-tester.txt</code> to the Desktop and opens a pre-filled GitHub report:</p>
         <pre class="cmd" data-testid="tester-cmd-en">curl -fsSL https://komar-developer.github.io/Audio8-DJ-web/tester.sh | bash</pre>
-        <p><a data-gh-issues href="#" target="_blank" rel="noopener" data-testid="issues-link-en">GitHub issues</a>: Apple Silicon requests, tester reports and bugs.</p>
+        <p><a data-gh-issues href="#" target="_blank" rel="noopener" data-testid="issues-link-en">GitHub issues</a>: Apple Silicon requests, tester reports and bugs. Got an M Mac? See the <a href="testers.html" data-testid="testers-link-en">testers page</a>.</p>
 
         <h2>Common problems</h2>
         <h3>No sound</h3>
@@ -67,6 +75,14 @@
         <p>Each Mac needs its own activation. Click <b>Send</b> on this Mac to request a new registration; the previous Key doesn't work here.</p>
         <h3>The Audio 8 doesn't show up</h3>
         <p>Try another USB cable or port, without a hub, and check the power is on. Then click <b>Check again</b>.</p>
+        <h3>Traktor gets no audio on the inputs (timecode)</h3>
+        <video class="guide" controls playsinline muted preload="none" poster="assets/guia-dvs-en.jpg" aria-label="Video guide: microphone permission, Mic Mode Standard and calibrating Traktor (28 s)." data-testid="dvs-guide-video-en"><source src="assets/guia-dvs-en.mp4" type="video/mp4" /></video>
+        <p>If QuickTime or your DAW does get a signal from the Audio 8 but Traktor shows <b>“Waiting…”</b> or a diagonal line, check two macOS settings. Control Center also detects this and warns you under <b>Audio status</b>, with a button to fix the permission:</p>
+        <p><b>1. Microphone permission.</b> macOS only passes input audio to apps with <b>Microphone</b> permission, external interfaces included. If Traktor is missing from System Settings &gt; Privacy &amp; Security &gt; Microphone, quit Traktor and paste this in Terminal; when you open Traktor and set a deck to Live Input, macOS will ask again:</p>
+        <pre class="cmd" data-testid="mic-reset-cmd-en">tccutil reset Microphone com.native-instruments.Traktor</pre>
+        <p>If it still doesn't ask, give Terminal <b>Full Disk Access</b> (in Privacy &amp; Security) and run this script, which grants the permission directly after saving a backup:</p>
+        <pre class="cmd" data-testid="mic-fix-cmd-en">curl -fsSL https://komar-developer.github.io/Audio8-DJ-web/traktor-micro-fix.command -o ~/Desktop/traktor-micro-fix.command; chmod +x ~/Desktop/traktor-micro-fix.command; open ~/Desktop/traktor-micro-fix.command</pre>
+        <p><b>2. Mic Mode set to “Standard”.</b> With Traktor open, click the orange microphone icon in the menu bar (Control Center) &gt; <b>Mic Mode</b> and choose <b>Standard</b>. With <b>Voice Isolation</b> or <b>Wide Spectrum</b>, macOS filters the timecode signal as if it were noise and Traktor can't read it.</p>
         <h3>macOS won't open the installer</h3>
         <p>Only download it from this website. If a warning still appears, email us with the exact text of the message.</p>
       </div>
@@ -75,7 +91,7 @@
     </article>
 
     <footer>
-      <nav><a href="index.html"><span data-l="es">Descarga</span><span data-l="en">Download</span></a><a href="activar.html"><span data-l="es">Activación</span><span data-l="en">Activation</span></a><a href="instrucciones.html"><span data-l="es">Instrucciones</span><span data-l="en">Instructions</span></a><a href="soporte.html"><span data-l="es">Soporte</span><span data-l="en">Support</span></a><a href="privacidad.html"><span data-l="es">Privacidad</span><span data-l="en">Privacy</span></a><a href="terminos.html"><span data-l="es">Términos</span><span data-l="en">Terms</span></a></nav>
+      <nav><a href="index.html"><span data-l="es">Descarga</span><span data-l="en">Download</span></a><a href="activar.html"><span data-l="es">Activación</span><span data-l="en">Activation</span></a><a href="instrucciones.html"><span data-l="es">Instrucciones</span><span data-l="en">Instructions</span></a><a href="soporte.html"><span data-l="es">Soporte</span><span data-l="en">Support</span></a><a href="testers.html">Testers</a><a href="privacidad.html"><span data-l="es">Privacidad</span><span data-l="en">Privacy</span></a><a href="terminos.html"><span data-l="es">Términos</span><span data-l="en">Terms</span></a></nav>
       <p data-l="es">Basado en OpenA8DJ, un proyecto independiente de compatibilidad. No afiliado a Native Instruments ni Apple.</p>
       <p data-l="en">Based on OpenA8DJ, an independent compatibility project. Not affiliated with Native Instruments or Apple.</p>
       <p class="copy" data-testid="site-copyright">© <span data-year></span> Adelio Falcó Martí · Audio8 DJ compiler kext</p>

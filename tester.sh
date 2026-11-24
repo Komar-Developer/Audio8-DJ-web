@@ -49,6 +49,24 @@ else
   note "Sound test: not run"
 fi
 
+u=$(ask "$(t '¿Usas las entradas (timecode/DVS)? Abre Traktor con un deck en timecode o Live Input, pon el disco o CD de timecode a sonar en la entrada A y pulsa Intro. Escribe x para saltarlo:' 'Do you use the inputs (timecode/DVS)? Open Traktor with a deck in timecode or Live Input, play the timecode record or CD on input A and press Enter. Type x to skip:')")
+if [ "$u" != "x" ]; then
+  T 6 /usr/local/bin/opena8dj-control input-stats >/dev/null 2>&1; sleep 5
+  IN=$(T 6 /usr/local/bin/opena8dj-control input-stats 2>&1 | grep "Input A")
+  note "Input A (5 s): ${IN:-no data}"
+  FR=$(printf '%s' "$IN" | sed -n 's/.*frames=\([0-9]*\).*/\1/p'); CO=$(printf '%s' "$IN" | sed -n 's/.*corr=\(-*[0-9.]*\).*/\1/p')
+  if [ "${FR:-0}" -lt 1000 ]; then
+    echo "$(t 'Ninguna app esta leyendo las entradas. Revisa el permiso de Microfono de Traktor (Ajustes > Privacidad y seguridad > Microfono). Ayuda: https://komar-developer.github.io/Audio8-DJ-web/soporte.html' 'No app is reading the inputs. Check Traktor Microphone permission (Settings > Privacy & Security > Microphone). Help: https://komar-developer.github.io/Audio8-DJ-web/soporte.html')"
+    RES="$RES input:no-reader"
+  elif awk "BEGIN{exit !($CO > 0.95)}"; then
+    echo "$(t 'La entrada A llega casi en mono: revisa el cable y pon el Modo de micrófono en Estándar (icono naranja de la barra de menús).' 'Input A is almost mono: check the cable and set Mic Mode to Standard (orange menu bar icon).')"
+    RES="$RES input:mono"
+  else
+    RES="$RES input:ok"
+  fi
+  echo "$(t 'Recuerda: Modo de micrófono en Estándar, no Aislamiento de voz.' 'Remember: Mic Mode on Standard, not Voice Isolation.')"
+fi
+
 DJ=$(ask "$(t '¿Que software de DJ has probado y como ha ido? (Intro para omitir):' 'Which DJ software did you try and how did it go? (Enter to skip):')")
 note "DJ software: $DJ"
 note ""; note "== system_profiler SPAudioDataType (Audio 8)"

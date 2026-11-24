@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title data-es="Testers Apple Silicon · Audio8 DJ" data-en="Apple Silicon testers · Audio8 DJ">Testers Apple Silicon · Audio8 DJ</title>
+  <meta name="theme-color" content="#050505" />
+  <script>(function(){var l;try{l=localStorage.getItem("a8dj-lang")}catch(e){}if(l!=="es"&&l!=="en")l=/^es\b/i.test(navigator.language||"")?"es":"en";document.documentElement.lang=l})();</script>
+  <link rel="icon" href="assets/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <a href="index.html" data-testid="site-home-link"><img src="assets/icon-512.png" alt="" /><span class="brand">Audio<b>8</b> DJ</span></a>
+      <span class="tag"><span data-l="es">Testers</span><span data-l="en">Testers</span></span>
+      <button id="lang-toggle" class="lang" type="button" data-testid="lang-toggle">EN</button>
+    </header>
+
+    <article data-testid="testers-page">
+      <div data-l="es">
+        <span class="eyebrow"><span class="led"></span> Apple Silicon · M1 · M2 · M3 · M4</span>
+        <h1 data-as="soon">Prueba la beta en tu Mac M</h1>
+        <h1 data-as="ok">Cuéntanos cómo va en tu Mac M</h1>
+        <p class="lead" data-as="soon">La versión 2.0.0 añade los Macs con chip Apple. Antes de publicarla necesitamos DJs que la prueben con su Audio 8 DJ real. Son unos 10 minutos y la Key es gratis para quien pruebe.</p>
+        <p class="lead" data-as="ok">La versión 2.0.0 ya funciona en Macs con chip Apple. Si la usas, tu informe nos ayuda a confirmarlo en más modelos de Mac y versiones de macOS.</p>
+
+        <h2>Qué necesitas</h2>
+        <p>Un Mac con chip Apple y macOS 13 Ventura o posterior, una Audio 8 DJ y auriculares o altavoces en la salida A.</p>
+
+        <h2>1. Descarga</h2>
+        <div class="soon-actions row-actions">
+          <a id="beta-btn" class="btn btn-primary" href="#" data-testid="beta-btn"><span data-as="soon">Descargar la beta</span><span data-as="ok">Descargar 2.0</span></a>
+          <a class="btn" data-notify="es" href="#" data-testid="beta-notify-es">Avísame</a>
+        </div>
+        <p class="meta" id="beta-meta" data-testid="beta-meta"></p>
+        <p>Abre el DMG y haz doble clic en <b>Audio 8 DJ for Apple Silicon</b>.</p>
+
+        <h2>2. Pide tu Key gratis</h2>
+        <p>Abre Control Center &gt; <b>Activation…</b>, copia tu Nº de dispositivo y envíanoslo con este correo. Te mandamos la Key para ese Mac.</p>
+        <p><a class="btn" data-notify="key-es" href="#" data-testid="key-mail-es">Pedir Key de tester</a></p>
+
+        <h2>3. Ejecuta el test</h2>
+        <p>Abre Terminal, pega esto y sigue las preguntas. Prueba el sonido a 44,1 · 48 · 88,2 · 96 kHz, mira las entradas si usas timecode y guarda <code>a8dj-tester.txt</code> en el Escritorio:</p>
+        <pre class="cmd" data-testid="testers-cmd-es">curl -fsSL https://komar-developer.github.io/Audio8-DJ-web/tester.sh | bash</pre>
+
+        <h2>4. Envía tu informe</h2>
+        <p>Al terminar se abre un informe ya rellenado en GitHub. Arrastra <code>a8dj-tester.txt</code> al recuadro y pulsa <b>Create</b>. También puedes abrirlo desde aquí:</p>
+        <div class="soon-actions row-actions">
+          <a class="btn soon-btn" data-gh-issue="tester" href="#" target="_blank" rel="noopener" data-testid="testers-report-es">Enviar informe de tester <b class="count" data-gh-count="tester" data-testid="testers-count-es"></b></a>
+          <a class="btn soon-btn" data-gh-issue="request" href="#" target="_blank" rel="noopener" data-testid="testers-request-es">Solicitudes <b class="count" data-gh-count="request" data-testid="testers-requests-es"></b></a>
+        </div>
+        <p>El número junto a cada botón es el total de informes y solicitudes recibidos en GitHub. Si no tienes cuenta de GitHub, envía <code>a8dj-tester.txt</code> por correo a <a data-email href="#"></a>.</p>
+
+        <h2>Macs ya probados</h2>
+        <p>Cada informe de tester enviado a GitHub aparece aquí con su Mac, su macOS y el resultado.</p>
+        <ul class="tested" data-tested data-testid="tested-list-es"><li class="meta">Cargando informes…</li></ul>
+
+        <h2>Si algo falla</h2>
+        <p>Revisa <a href="soporte.html">Soporte</a>: permiso de micrófono, Modo de micrófono en Estándar y calibración del timecode. Para desinstalar, el DMG trae <b>Uninstall Audio 8 DJ</b>.</p>
+      </div>
+
+      <div data-l="en">
+        <span class="eyebrow"><span class="led"></span> Apple Silicon · M1 · M2 · M3 · M4</span>
+        <h1 data-as="soon">Try the beta on your M Mac</h1>
+        <h1 data-as="ok">Tell us how it goes on your M Mac</h1>
+        <p class="lead" data-as="soon">Version 2.0.0 adds Macs with an Apple chip. Before release we need DJs to try it with their real Audio 8 DJ. It takes about 10 minutes and the Key is free for testers.</p>
+        <p class="lead" data-as="ok">Version 2.0.0 now works on Apple-chip Macs. If you use it, your report helps us confirm it on more Mac models and macOS versions.</p>
+
+        <h2>What you need</h2>
+        <p>A Mac with an Apple chip and macOS 13 Ventura or later, an Audio 8 DJ and headphones or speakers on output A.</p>
+
+        <h2>1. Download</h2>
+        <div class="soon-actions row-actions">
+          <a class="btn btn-primary" data-beta-mirror href="#" data-testid="beta-btn-en"><span data-as="soon">Download the beta</span><span data-as="ok">Download 2.0</span></a>
+          <a class="btn" data-notify="en" href="#" data-testid="beta-notify-en">Notify me</a>
+        </div>
+        <p class="meta" data-beta-meta-mirror data-testid="beta-meta-en"></p>
+        <p>Open the DMG and double-click <b>Audio 8 DJ for Apple Silicon</b>.</p>
+
+        <h2>2. Request your free Key</h2>
+        <p>Open Control Center &gt; <b>Activation…</b>, copy your Device number and send it to us with this email. We'll send you the Key for that Mac.</p>
+        <p><a class="btn" data-notify="key-en" href="#" data-testid="key-mail-en">Request a tester Key</a></p>
+
+        <h2>3. Run the test</h2>
+        <p>Open Terminal, paste this and follow the questions. It tests the sound at 44.1 · 48 · 88.2 · 96 kHz, checks the inputs if you use timecode and saves <code>a8dj-tester.txt</code> to the Desktop:</p>
+        <pre class="cmd" data-testid="testers-cmd-en">curl -fsSL https://komar-developer.github.io/Audio8-DJ-web/tester.sh | bash</pre>
+
+        <h2>4. Send your report</h2>
+        <p>When it finishes, a pre-filled GitHub report opens. Drag <code>a8dj-tester.txt</code> into the box and click <b>Create</b>. You can also open it from here:</p>
+        <div class="soon-actions row-actions">
+          <a class="btn soon-btn" data-gh-issue="tester" href="#" target="_blank" rel="noopener" data-testid="testers-report-en">Send a tester report <b class="count" data-gh-count="tester" data-testid="testers-count-en"></b></a>
+          <a class="btn soon-btn" data-gh-issue="request" href="#" target="_blank" rel="noopener" data-testid="testers-request-en">Requests <b class="count" data-gh-count="request" data-testid="testers-requests-en"></b></a>
+        </div>
+        <p>The number next to each button is the total reports and requests received on GitHub. No GitHub account? Email <code>a8dj-tester.txt</code> to <a data-email href="#"></a>.</p>
+
+        <h2>Macs already tested</h2>
+        <p>Every tester report sent to GitHub shows up here with its Mac, macOS and result.</p>
+        <ul class="tested" data-tested data-testid="tested-list-en"><li class="meta">Loading reports…</li></ul>
+
+        <h2>If something fails</h2>
+        <p>See <a href="soporte.html">Support</a>: microphone permission, Mic Mode on Standard and timecode calibration. To uninstall, the DMG includes <b>Uninstall Audio 8 DJ</b>.</p>
+      </div>
+
+      <div class="back-row"><a class="btn" href="index.html" data-testid="back-btn">← <span data-l="es">Volver</span><span data-l="en">Back</span></a></div>
+    </article>
+
+    <footer>
+      <nav><a href="index.html"><span data-l="es">Descarga</span><span data-l="en">Download</span></a><a href="activar.html"><span data-l="es">Activación</span><span data-l="en">Activation</span></a><a href="instrucciones.html"><span data-l="es">Instrucciones</span><span data-l="en">Instructions</span></a><a href="soporte.html"><span data-l="es">Soporte</span><span data-l="en">Support</span></a><a href="testers.html">Testers</a><a href="privacidad.html"><span data-l="es">Privacidad</span><span data-l="en">Privacy</span></a><a href="terminos.html"><span data-l="es">Términos</span><span data-l="en">Terms</span></a></nav>
+      <p data-l="es">Basado en OpenA8DJ, un proyecto independiente de compatibilidad. No afiliado a Native Instruments ni Apple.</p>
+      <p data-l="en">Based on OpenA8DJ, an independent compatibility project. Not affiliated with Native Instruments or Apple.</p>
+      <p class="copy" data-testid="site-copyright">© <span data-year></span> Adelio Falcó Martí · Audio8 DJ compiler kext</p>
+    </footer>
+  </div>
+  <script src="config.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
